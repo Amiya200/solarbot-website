@@ -208,40 +208,61 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // ===== CONTACT FORM =====
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const submitBtn = contactForm.querySelector('[type="submit"]');
-      const successEl = document.getElementById('formSuccess');
+// ===== CONTACT FORM (FINAL WORKING VERSION) =====
+const contactForm = document.getElementById('contactForm');
 
-      submitBtn.textContent = 'Sending...';
-      submitBtn.disabled = true;
+if (contactForm) {
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-      setTimeout(() => {
-        contactForm.reset();
-        submitBtn.textContent = 'Send Message ☀';
-        submitBtn.disabled = false;
-        if (successEl) {
-          successEl.style.display = 'block';
-          setTimeout(() => { successEl.style.display = 'none'; }, 6000);
-        }
-      }, 1000);
-    });
-  }
+    const submitBtn = contactForm.querySelector('[type="submit"]');
+    const successEl = document.getElementById('formSuccess');
 
-  // ===== MARQUEE PAUSE ON HOVER =====
-  const marqueeInner = document.querySelector('.marquee-inner');
-  const marqueeStrip = document.querySelector('.marquee-strip');
-  if (marqueeStrip && marqueeInner) {
-    marqueeStrip.addEventListener('mouseenter', () => {
-      marqueeInner.style.animationPlayState = 'paused';
-    });
-    marqueeStrip.addEventListener('mouseleave', () => {
-      marqueeInner.style.animationPlayState = 'running';
-    });
-  }
+    const name = contactForm.querySelector('[name="name"]').value.trim();
+    const email = contactForm.querySelector('[name="email"]').value.trim();
+    const message = contactForm.querySelector('[name="message"]').value.trim();
+
+    if (!name || !email || !message) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    // 🔴 UPDATE THESE
+    const phone = "919876543210";
+    const yourEmail = "your@email.com";
+
+    const text = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+    );
+
+    // UI feedback
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    // ===== WHATSAPP =====
+    window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+
+    // ===== EMAIL (backup) =====
+    setTimeout(() => {
+      window.location.href =
+        `mailto:${yourEmail}?subject=SolarBot Quote Request&body=${text}`;
+    }, 600);
+
+    // Reset + success UI
+    setTimeout(() => {
+      contactForm.reset();
+      submitBtn.textContent = 'Send Message ☀';
+      submitBtn.disabled = false;
+
+      if (successEl) {
+        successEl.style.display = 'block';
+        setTimeout(() => {
+          successEl.style.display = 'none';
+        }, 5000);
+      }
+    }, 1200);
+  });
+}
 
   // ===== ACTIVE NAV LINK ON SCROLL =====
   const sections = document.querySelectorAll('section[id]');
@@ -288,46 +309,29 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Theme toggle
+// ===== THEME TOGGLE (PERSISTENT) =====
 const toggleBtn = document.createElement("button");
-toggleBtn.innerText = "Toggle Theme";
+toggleBtn.innerText = "🌙 / ☀";
 toggleBtn.style.position = "fixed";
 toggleBtn.style.bottom = "20px";
 toggleBtn.style.right = "20px";
+toggleBtn.style.padding = "10px";
+toggleBtn.style.borderRadius = "8px";
+toggleBtn.style.cursor = "pointer";
+toggleBtn.style.zIndex = "999";
+
 document.body.appendChild(toggleBtn);
+
+// Load saved theme
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  document.documentElement.setAttribute("data-theme", savedTheme);
+}
 
 toggleBtn.onclick = () => {
   const current = document.documentElement.getAttribute("data-theme");
-  document.documentElement.setAttribute(
-    "data-theme",
-    current === "dark" ? "light" : "dark"
-  );
+  const newTheme = current === "dark" ? "light" : "dark";
+
+  document.documentElement.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
 };
-// ===== QUOTE FORM WHATSAPP + EMAIL =====
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contactForm");
-
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const name = form.querySelector('input[name="name"]').value;
-      const email = form.querySelector('input[name="email"]').value;
-      const message = form.querySelector('textarea[name="message"]').value;
-
-      const phone = "919876543210"; // 👈 CHANGE THIS
-      const yourEmail = "your@email.com"; // 👈 CHANGE THIS
-
-      const text = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
-      );
-
-      // WhatsApp
-      window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
-
-      // Email
-      window.location.href =
-        `mailto:${yourEmail}?subject=Quote Request&body=${text}`;
-    });
-  }
-});
