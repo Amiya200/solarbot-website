@@ -1,60 +1,4 @@
-import { useEffect } from "react";
 function Product() {
-  useEffect(() => {
-    const robot = document.getElementById("heroRobot");
-    const clean = document.getElementById("cleanOverlay");
-    const dirt = document.getElementById("dirtOverlay");
-    const progress = document.getElementById("robotProgress");
-    const pct = document.getElementById("robotPct");
-
-    const runAnimation = () => {
-
-      // Reset instantly
-      robot.style.transition = "none";
-      clean.style.transition = "none";
-      dirt.style.transition = "none";
-      progress.style.transition = "none";
-
-      robot.style.left = "5%";
-      clean.style.width = "0%";
-      dirt.style.opacity = "1";
-      progress.style.width = "0%";
-      pct.textContent = "0%";
-
-      let count = 0;
-
-      // Wait one frame before animating
-      setTimeout(() => {
-
-        robot.style.transition = "left 4s ease";
-        clean.style.transition = "width 4s ease";
-        dirt.style.transition = "opacity 4s ease";
-        progress.style.transition = "width 4s ease";
-
-        robot.style.left = "80%";
-        clean.style.width = "100%";
-        dirt.style.opacity = "0";
-        progress.style.width = "100%";
-
-      }, 30);
-
-      const counter = setInterval(() => {
-        count++;
-        pct.textContent = count + "%";
-
-        if (count >= 100) {
-          clearInterval(counter);
-        }
-      }, 40);
-    };
-    runAnimation();
-
-    const loop = setInterval(() => {
-        runAnimation();
-    }, 6000); // 4 sec animation + 2 sec pause
-
-    return () => clearInterval(loop);
-  }, []);
   return (
     <section className="section" id="product">
       <div className="container">
@@ -98,9 +42,10 @@ function Product() {
             <div>
 
               <div
+                className="product-solar-surface"
                 style={{
                   position: "relative",
-                  height: "200px",
+                  height: "320px",
                   background: "var(--navy-3)",
                   borderRadius: "16px",
                   overflow: "hidden",
@@ -147,11 +92,9 @@ function Product() {
                   id="heroRobot"
                   style={{
                     position: "absolute",
-                    top: "50%",
-                    left: "5%",
-                    transform: "translateY(-50%)",
-                    zIndex: 10,
-                    transition: "left 4s ease"
+                    top: "4%",
+                    left: "4%",
+                    zIndex: 10
                   }}
                 >
                   <div
@@ -283,13 +226,12 @@ function Product() {
                   }}
                 >
                   <div
-                    id="robotProgress"
+                    id="robotProgress" className="product-progress-fill"
                     style={{
                       height: "100%",
-                      width: "0%",
+                      width: "100%",
                       background:
-                        "linear-gradient(90deg,var(--blue),var(--teal))",
-                      transition: "width 4s ease"
+                        "linear-gradient(90deg,var(--blue),var(--teal))"
                     }}
                     
                   ></div>
@@ -302,7 +244,7 @@ function Product() {
                     color: "var(--teal)",
                   }}
                 >
-                  0%
+                  AUTO
                 </span>
               </div>
 

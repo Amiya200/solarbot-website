@@ -6,6 +6,7 @@ import Problem from "./components/Problem";
 import Product from "./components/Product";
 import Efficiency from "./components/Efficiency";
 import Landing from "./components/Landing"
+import ContactBooking from "./components/ContactBooking";
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
       <Product />
       <Efficiency />
       <Landing />
+      <ContactBooking />
     </>
   );
 }

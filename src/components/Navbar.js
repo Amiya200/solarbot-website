@@ -1,24 +1,30 @@
 import React from "react";
+import { CONTACT } from "../config/contact";
 
 function Navbar() {
   return (
-    <nav
-      style={{
-        background: "#080C17",
-        color: "white",
-        padding: "20px 40px",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-      }}
-    >
-      <h2>☀ SolarBot</h2>
+    <nav className="site-nav">
+      <div className="container nav-inner">
+        <a className="logo" href="#hero" aria-label="SolarBot home">
+          <span className="logo-icon">☀</span>
+          Solar<span>Bot</span>
+        </a>
 
-      <div style={{ display: "flex", gap: "20px" }}>
-        <a href="#hero" style={{ color: "white" }}>Home</a>
-        <a href="#product" style={{ color: "white" }}>Product</a>
-        <a href="#features" style={{ color: "white" }}>Features</a>
-        <a href="#pricing" style={{ color: "white" }}>Pricing</a>
+        <div className="nav-links-simple">
+          <a href="#product">Product</a>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <a
+          className="btn btn-primary btn-sm nav-contact"
+          href={CONTACT.whatsappUrl("Hi SolarBot team, I would like to speak with you about SolarBot.")}
+          target={CONTACT.whatsappNumber ? "_blank" : undefined}
+          rel="noreferrer"
+        >
+          WhatsApp us
+        </a>
       </div>
     </nav>
   );

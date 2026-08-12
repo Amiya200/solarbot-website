@@ -34,7 +34,7 @@ function Problem() {
           <div>
             <div className="decay-timeline">
               <div className="decay-title">
-                // Panel Efficiency Over Time (Without Cleaning)
+                Panel Efficiency Over Time (Without Cleaning)
               </div>
 
               <div className="decay-rows">

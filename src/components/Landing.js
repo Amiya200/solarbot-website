@@ -1,3 +1,4 @@
+import { CONTACT } from "../config/contact";
 function LandingSections() {
   return (
     <>
@@ -558,7 +559,7 @@ function LandingSections() {
             <div className="pricing-card reveal d1">
 
               <div className="pricing-tier">
-                // Entry
+                Entry
               </div>
 
               <div className="pricing-name">
@@ -623,7 +624,7 @@ function LandingSections() {
               </div>
 
               <a
-                href="https://wa.me/91XXXXXXXXXX?text=I want to buy SolarBot Lite ₹8,999"
+                href={CONTACT.whatsappUrl("Hi SolarBot team, I want to buy SolarBot Lite for ₹8,999.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-ghost"
@@ -645,7 +646,7 @@ function LandingSections() {
               </div>
 
               <div className="pricing-tier">
-                // Best Value
+                Best Value
               </div>
 
               <div className="pricing-name">
@@ -719,7 +720,7 @@ function LandingSections() {
               </div>
 
               <a
-                href="https://wa.me/91XXXXXXXXXX?text=I want to buy SolarBot Pro ₹14,999"
+                href={CONTACT.whatsappUrl("Hi SolarBot team, I want to buy SolarBot Pro for ₹14,999.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-blue btn-lg"
@@ -737,7 +738,7 @@ function LandingSections() {
             <div className="pricing-card reveal d3">
 
               <div className="pricing-tier">
-                // Commercial
+                Commercial
               </div>
 
               <div className="pricing-name">
@@ -808,7 +809,7 @@ function LandingSections() {
               </div>
 
               <a
-                href="https://wa.me/91XXXXXXXXXX?text=I want to buy SolarBot Max ₹34,999 for commercial use"
+                href={CONTACT.whatsappUrl("Hi SolarBot team, I want to buy SolarBot Max for ₹34,999 for commercial use.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-ghost"
