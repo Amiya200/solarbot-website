@@ -2,7 +2,13 @@ import { useState, useEffect } from "react";
 
 function Efficiency() {
 
-  const BOT_COST = 14999;
+  const MODEL_COSTS = {
+    semi: 14000,
+    full: 25000,
+  };
+
+  const [model, setModel] = useState("full");
+  const BOT_COST = MODEL_COSTS[model];
 
   const [capacity, setCapacity] = useState(3);
   const [dirty, setDirty] = useState(20);
@@ -59,7 +65,7 @@ function Efficiency() {
       )
     );
 
-  }, [capacity, dirty, rate]);
+  }, [capacity, dirty, rate, model, BOT_COST]);
 
   useEffect(() => {
 
@@ -414,7 +420,32 @@ Example based on a 3kW system, 3 months since last clean
             <div className="roi-row">
 
               <span className="roi-row-label">
-                SolarBot Pro cost (one time)
+                Model
+              </span>
+
+              <span className="roi-model-toggle">
+                <button
+                  type="button"
+                  className={model === "semi" ? "active" : ""}
+                  onClick={() => setModel("semi")}
+                >
+                  Semi · ₹14,000
+                </button>
+                <button
+                  type="button"
+                  className={model === "full" ? "active" : ""}
+                  onClick={() => setModel("full")}
+                >
+                  Full · ₹25,000
+                </button>
+              </span>
+
+            </div>
+
+            <div className="roi-row">
+
+              <span className="roi-row-label">
+                SolarBot {model === "semi" ? "Semi" : "Full"} cost (one time)
               </span>
 
               <span
@@ -423,7 +454,7 @@ Example based on a 3kW system, 3 months since last clean
                   color: "var(--white)"
                 }}
               >
-                ₹14,999
+                ₹{BOT_COST.toLocaleString("en-IN")}
               </span>
 
             </div>

@@ -30,7 +30,7 @@ function Hero() {
             </h1>
 
             <p className="hero-sub">
-              SolarBot Pro automatically cleans your solar panels —
+              SolarBot automatically cleans your solar panels —
               restoring up to <strong>40% lost efficiency</strong>.
               Dry cleaning mode for daily dust, low-water mode for tougher grime.
               Zero effort. Zero roof climbing.
@@ -39,7 +39,7 @@ function Hero() {
 
             <div className="hero-actions">
               <a href="#pricing" className="btn btn-primary btn-lg">
-                🛒 Buy Now — ₹14,999
+                🛒 See Pricing — From ₹14,000
               </a>
 
               <a href="#product" className="btn btn-ghost btn-lg">

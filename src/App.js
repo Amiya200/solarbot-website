@@ -10,6 +10,7 @@ import ContactBooking from "./components/ContactBooking";
 import Footer from "./components/Footer";
 import AuthModal from "./components/AuthModal";
 import Dashboard from "./components/Dashboard";
+import ChatBot from "./components/ChatBot";
 import useAuth from "./hooks/useAuth";
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
       <Landing />
       <ContactBooking />
       <Footer />
+      <ChatBot />
 
       {authModalOpen && (
         <AuthModal

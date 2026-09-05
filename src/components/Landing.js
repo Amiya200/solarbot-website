@@ -223,7 +223,7 @@ function LandingSections() {
                 and still inconsistent.
                 <strong style={{ color: "var(--teal)" }}>
                   {" "}
-                  SolarBot Max eliminated that
+                  SolarBot Full eliminated that
                   completely.
                 </strong>{" "}
                 ROI in under 3 months.
@@ -339,7 +339,7 @@ function LandingSections() {
               <thead>
                 <tr>
                   <th></th>
-                  <th className="th-our">SolarBot Pro</th>
+                  <th className="th-our">SolarBot Full</th>
                   <th className="th-other">Manual Cleaning</th>
                   <th className="th-other">Do Nothing</th>
                 </tr>
@@ -357,7 +357,7 @@ function LandingSections() {
                       fontWeight: 700,
                     }}
                   >
-                    ₹14,999 (one-time)
+                    ₹25,000 (one-time)
                   </td>
 
                   <td>₹6,000–₹24,000/yr</td>
@@ -536,55 +536,51 @@ function LandingSections() {
                 className="pulse-dot gold"
                 style={{ width: "5px", height: "5px" }}
               ></div>
-              Launch Pricing
+              Pricing
             </div>
 
             <h2 className="section-title">
-              INVEST ONCE.
+              PICK YOUR
               <br />
               <span className="highlight-blue">
-                SAVE FOREVER.
+                SOLARBOT.
               </span>
             </h2>
 
             <p className="section-sub">
-              30% launch discount. Only 47 units left at this price.
+              Two ways to own SolarBot, or book a one-time cleaning
+              session without buying anything.
             </p>
           </div>
 
           <div className="pricing-grid">
 
-            {/* ===================== LITE ===================== */}
+            {/* ===================== SEMI-AUTOMATIC ===================== */}
 
             <div className="pricing-card reveal d1">
 
               <div className="pricing-tier">
-                Entry
+                Manual Trigger
               </div>
 
               <div className="pricing-name">
-                SolarBot Lite
+                SolarBot Semi
               </div>
 
               <div className="pricing-desc">
-                For small homes with 1–3 solar panels.
-                Perfect first step to recovering your
-                solar investment.
+                Start a clean whenever you want, right from the app.
+                A great first step away from manual cleaning.
               </div>
 
               <div className="pricing-price">
 
-                <div className="price-orig">
-                  Was ₹12,999
-                </div>
-
                 <div className="price-amount">
                   <span className="curr">₹</span>
-                  8,999
+                  14,000
                 </div>
 
                 <div className="pricing-note">
-                  one-time payment · free shipping
+                  one-time payment
                 </div>
 
               </div>
@@ -593,12 +589,7 @@ function LandingSections() {
 
                 <div className="pf">
                   <span className="pf-icon">✓</span>
-                  Covers 1–3 panels
-                </div>
-
-                <div className="pf">
-                  <span className="pf-icon">✓</span>
-                  Daily auto cleaning
+                  Start cleaning on-demand via app
                 </div>
 
                 <div className="pf">
@@ -613,7 +604,12 @@ function LandingSections() {
 
                 <div className="pf">
                   <span className="pf-icon">✓</span>
-                  1-year warranty
+                  Plug-in charging
+                </div>
+
+                <div className="pf">
+                  <span className="pf-icon">✓</span>
+                  2-year warranty
                 </div>
 
                 <div className="pf">
@@ -624,7 +620,7 @@ function LandingSections() {
               </div>
 
               <a
-                href={CONTACT.whatsappUrl("Hi SolarBot team, I want to buy SolarBot Lite for ₹8,999.")}
+                href={CONTACT.whatsappUrl("Hi SolarBot team, I want to buy SolarBot Semi for ₹14,000.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-ghost"
@@ -633,40 +629,37 @@ function LandingSections() {
                   justifyContent: "center",
                 }}
               >
-                Buy Lite — ₹8,999 →
+                Buy Semi — ₹14,000 →
               </a>
 
             </div>
-                        {/* ===================== PRO (FEATURED) ===================== */}
+
+            {/* ===================== FULLY AUTOMATIC (FEATURED) ===================== */}
 
             <div className="pricing-card featured reveal d2">
 
               <div className="pricing-badge">
-                ★ MOST POPULAR
+                ★ FULLY AUTONOMOUS
               </div>
 
               <div className="pricing-tier">
-                Best Value
+                Set &amp; Forget
               </div>
 
               <div className="pricing-name">
-                SolarBot Pro
+                SolarBot Full
               </div>
 
               <div className="pricing-desc">
-                The sweet spot. For homes and SMEs with
-                4–10 panels. Maximum ROI, fastest payback.
+                Runs on its own schedule, every day, with no input
+                from you. The hands-off option.
               </div>
 
               <div className="pricing-price">
 
-                <div className="price-orig">
-                  Was ₹21,999
-                </div>
-
                 <div className="price-amount">
                   <span className="curr">₹</span>
-                  14,999
+                  25,000
                 </div>
 
                 <div className="pricing-note">
@@ -679,12 +672,12 @@ function LandingSections() {
 
                 <div className="pf">
                   <span className="pf-icon">✓</span>
-                  Covers 4–10 panels
+                  Fully autonomous daily schedule
                 </div>
 
                 <div className="pf">
                   <span className="pf-icon">✓</span>
-                  Daily + custom scheduling
+                  Dry + low-water cleaning modes
                 </div>
 
                 <div className="pf">
@@ -720,7 +713,7 @@ function LandingSections() {
               </div>
 
               <a
-                href={CONTACT.whatsappUrl("Hi SolarBot team, I want to buy SolarBot Pro for ₹14,999.")}
+                href={CONTACT.whatsappUrl("Hi SolarBot team, I want to buy SolarBot Full for ₹25,000.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-blue btn-lg"
@@ -729,42 +722,37 @@ function LandingSections() {
                   justifyContent: "center",
                 }}
               >
-                🛒 Buy Pro — ₹14,999 →
+                🛒 Buy Full — ₹25,000 →
               </a>
 
             </div>
-                        {/* ===================== MAX ===================== */}
+
+            {/* ===================== ONE-TIME SERVICE ===================== */}
 
             <div className="pricing-card reveal d3">
 
               <div className="pricing-tier">
-                Commercial
+                No Purchase Needed
               </div>
 
               <div className="pricing-name">
-                SolarBot Max
+                Cleaning Service
               </div>
 
               <div className="pricing-desc">
-                For commercial arrays, factories,
-                and farms. 10–30 panels.
-                Eliminates your cleaning costs
-                entirely.
+                Not ready to buy? Book a one-time cleaning
+                session — our team brings the rover to you.
               </div>
 
               <div className="pricing-price">
 
-                <div className="price-orig">
-                  Was ₹49,999
-                </div>
-
                 <div className="price-amount">
                   <span className="curr">₹</span>
-                  34,999
+                  500
                 </div>
 
                 <div className="pricing-note">
-                  one-time · on-site installation available
+                  per cleaning session
                 </div>
 
               </div>
@@ -773,43 +761,28 @@ function LandingSections() {
 
                 <div className="pf">
                   <span className="pf-icon">✓</span>
-                  Covers 10–30 panels
+                  One full cleaning session
                 </div>
 
                 <div className="pf">
                   <span className="pf-icon">✓</span>
-                  Commercial-grade brushes
+                  Rover-based dry/water cleaning
                 </div>
 
                 <div className="pf">
                   <span className="pf-icon">✓</span>
-                  Multi-array management
+                  No installation or commitment
                 </div>
 
                 <div className="pf">
                   <span className="pf-icon">✓</span>
-                  Advanced efficiency analytics
-                </div>
-
-                <div className="pf">
-                  <span className="pf-icon">✓</span>
-                  SCADA integration ready
-                </div>
-
-                <div className="pf">
-                  <span className="pf-icon">✓</span>
-                  2-year warranty + AMC option
-                </div>
-
-                <div className="pf">
-                  <span className="pf-icon">✓</span>
-                  Dedicated account manager
+                  Book again anytime
                 </div>
 
               </div>
 
               <a
-                href={CONTACT.whatsappUrl("Hi SolarBot team, I want to buy SolarBot Max for ₹34,999 for commercial use.")}
+                href={CONTACT.whatsappUrl("Hi SolarBot team, I want to book a ₹500 cleaning session.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-ghost"
@@ -818,44 +791,11 @@ function LandingSections() {
                   justifyContent: "center",
                 }}
               >
-                Buy Max — ₹34,999 →
+                Book a Session — ₹500 →
               </a>
 
             </div>
 
-          </div>
-
-          {/* ===================== AMC NOTE ===================== */}
-
-          <div
-            className="reveal"
-            style={{
-              textAlign: "center",
-              marginTop: "32px",
-            }}
-          >
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "16px",
-                background: "var(--glass)",
-                border: "1px solid var(--border)",
-                borderRadius: "14px",
-                padding: "16px 28px",
-                fontSize: "14px",
-                color: "var(--muted)",
-              }}
-            >
-              <span>🔧</span>
-
-              <span>
-                Add Annual Maintenance Plan for
-                ₹1,999/yr — includes brush replacement,
-                software updates &amp; priority support.
-              </span>
-
-            </div>
           </div>
 
         </div>

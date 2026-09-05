@@ -6,7 +6,7 @@ const initialForm = {
   phone: "",
   email: "",
   city: "",
-  product: "SolarBot Pro",
+  product: "SolarBot Full (₹25,000)",
   message: "",
 };
 
@@ -272,20 +272,20 @@ function ContactBooking() {
                   value={form.product}
                   onChange={updateField}
                 >
-                  <option value="SolarBot Lite">
-                    SolarBot Lite
+                  <option value="SolarBot Semi (₹14,000)">
+                    SolarBot Semi — ₹14,000
                   </option>
 
-                  <option value="SolarBot Pro">
-                    SolarBot Pro
+                  <option value="SolarBot Full (₹25,000)">
+                    SolarBot Full — ₹25,000
                   </option>
 
-                  <option value="SolarBot Max">
-                    SolarBot Max
+                  <option value="Cleaning Service (₹500/session)">
+                    Cleaning Service — ₹500/session
                   </option>
 
-                  <option value="Commercial / custom array">
-                    Commercial / custom array
+                  <option value="Not sure yet">
+                    Not sure yet
                   </option>
                 </select>
               </label>
