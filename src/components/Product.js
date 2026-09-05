@@ -294,7 +294,7 @@ function Product() {
                     letterSpacing: "1px",
                     }}
                 >
-                    WATERLESS
+                    DRY + WATER MODES
                 </span>
 
                 <span
@@ -309,7 +309,7 @@ function Product() {
                     letterSpacing: "1px",
                     }}
                 >
-                    SELF-CHARGING
+                    PLUG-IN CHARGING
                 </span>
 
                 <span
@@ -351,7 +351,7 @@ function Product() {
 
         {/* FEATURES GRID */}
 
-        <div className="features-grid">
+        <div className="features-grid" id="features">
 
           <div className="feature-card reveal">
             <div className="feature-icon-box blue">🔄</div>
@@ -364,9 +364,10 @@ function Product() {
 
           <div className="feature-card reveal">
             <div className="feature-icon-box teal">💧</div>
-            <div className="feature-name">100% Waterless</div>
+            <div className="feature-name">Dry + Water Cleaning Modes</div>
             <div className="feature-desc">
-              No water needed. Works in the driest regions.
+              Dry mode for daily dust. Switch to water-assisted mode
+              for stubborn grime — uses a small, controlled amount of water.
             </div>
           </div>
 
@@ -378,9 +379,9 @@ function Product() {
             </div>
           </div>
           <div className="feature-card reveal d4">
-            <div className="feature-icon-box green">⚡</div>
-            <div className="feature-name">Self-Powered</div>
-            <div className="feature-desc">Built-in solar cell charges SolarBot during the day. It runs on your solar — using less than 0.1% of your daily generation.</div>
+            <div className="feature-icon-box green">🔌</div>
+            <div className="feature-name">Plug-In Charging</div>
+            <div className="feature-desc">SolarBot recharges via a standard plug-in charger between cleaning cycles — simple and reliable.</div>
         </div>
         <div className="feature-card reveal d5">
             <div className="feature-icon-box blue">🔧</div>
@@ -390,7 +391,7 @@ function Product() {
         <div className="feature-card reveal d6">
             <div className="feature-icon-box teal">🇮🇳</div>
             <div className="feature-name">Made in India</div>
-            <div className="feature-desc">Designed and manufactured in India. MNRE approved. Built for Indian weather — dust storms, monsoons, extreme heat, and humidity.</div>
+            <div className="feature-desc">Designed and manufactured in India. Built for Indian weather — dust storms, monsoons, extreme heat, and humidity.</div>
         </div>
 
         </div>

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
@@ -7,8 +7,15 @@ import Product from "./components/Product";
 import Efficiency from "./components/Efficiency";
 import Landing from "./components/Landing"
 import ContactBooking from "./components/ContactBooking";
+import Footer from "./components/Footer";
+import AuthModal from "./components/AuthModal";
+import Dashboard from "./components/Dashboard";
+import useAuth from "./hooks/useAuth";
 
 function App() {
+  const auth = useAuth();
+  const [authModalOpen, setAuthModalOpen] = useState(false);
+  const [dashboardOpen, setDashboardOpen] = useState(false);
 
   useEffect(() => {
     const reveals = document.querySelectorAll(
@@ -37,7 +44,11 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar
+        auth={auth}
+        onOpenAuth={() => setAuthModalOpen(true)}
+        onOpenDashboard={() => setDashboardOpen(true)}
+      />
       <Hero />
       <Marquee />
       <Problem />
@@ -45,6 +56,31 @@ function App() {
       <Efficiency />
       <Landing />
       <ContactBooking />
+      <Footer />
+
+      {authModalOpen && (
+        <AuthModal
+          onClose={() => setAuthModalOpen(false)}
+          onLogin={async (email, password) => {
+            await auth.login(email, password);
+            setAuthModalOpen(false);
+            setDashboardOpen(true);
+          }}
+          onSignup={auth.signup}
+        />
+      )}
+
+      {dashboardOpen && auth.isLoggedIn && (
+        <Dashboard
+          user={auth.user}
+          onPairDevice={auth.pairDevice}
+          onLogout={() => {
+            auth.logout();
+            setDashboardOpen(false);
+          }}
+          onClose={() => setDashboardOpen(false)}
+        />
+      )}
     </>
   );
 }

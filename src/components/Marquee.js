@@ -3,17 +3,17 @@ function Marquee() {
     <div className="marquee-strip">
       <div className="marquee-inner">
 
-        <span className="hi">✓ WATERLESS CLEANING</span>
+        <span className="hi">✓ DRY + WATER MODES</span>
         <span>★ MADE IN INDIA</span>
 
         <span className="gold">⚡ 40% EFFICIENCY RESTORED</span>
         <span>★ 2-YEAR WARRANTY</span>
 
         <span className="hi">✓ APP CONTROLLED</span>
-        <span>★ SELF-POWERED</span>
+        <span>★ PLUG-IN CHARGING</span>
 
         <span className="gold">⚡ PAYS FOR ITSELF IN 7 MONTHS</span>
-        <span>★ MNRE APPROVED</span>
+        <span>★ DUAL BRUSH SYSTEM</span>
 
         <span className="hi">✓ WORKS ON ANY PANEL BRAND</span>
         <span>★ FREE SETUP CALL</span>
@@ -23,17 +23,17 @@ function Marquee() {
 
         {/* Duplicate for seamless scrolling */}
 
-        <span className="hi">✓ WATERLESS CLEANING</span>
+        <span className="hi">✓ DRY + WATER MODES</span>
         <span>★ MADE IN INDIA</span>
 
         <span className="gold">⚡ 40% EFFICIENCY RESTORED</span>
         <span>★ 2-YEAR WARRANTY</span>
 
         <span className="hi">✓ APP CONTROLLED</span>
-        <span>★ SELF-POWERED</span>
+        <span>★ PLUG-IN CHARGING</span>
 
         <span className="gold">⚡ PAYS FOR ITSELF IN 7 MONTHS</span>
-        <span>★ MNRE APPROVED</span>
+        <span>★ DUAL BRUSH SYSTEM</span>
 
         <span className="hi">✓ WORKS ON ANY PANEL BRAND</span>
         <span>★ FREE SETUP CALL</span>

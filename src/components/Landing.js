@@ -44,13 +44,13 @@ function LandingSections() {
               </div>
 
               <div className="step-title">
-                Mount the Rail
+                Mount SolarBot
               </div>
 
               <div className="step-desc">
-                Bolt the SolarBot rail system to your panel frame once —
-                takes under 10 minutes with included tools.
-                No drilling into panels required.
+                Clip SolarBot onto your panel frame — no rail system,
+                no drilling into panels required.
+                Takes under 10 minutes with the included mounting kit.
                 Includes free setup support call.
               </div>
             </div>
@@ -69,7 +69,7 @@ function LandingSections() {
 
               <div className="step-desc">
                 Download the app,
-                connect SolarBot via Bluetooth,
+                connect SolarBot via WiFi,
                 and choose your cleaning schedule.
                 Recommended: every morning at 5 AM —
                 before peak generation hours.
@@ -94,8 +94,8 @@ function LandingSections() {
                 Dual brushes remove dust,
                 bird droppings,
                 and particulates
-                with zero water,
-                zero noise.
+                using dry cleaning mode,
+                with a water-assisted mode for tougher grime.
               </div>
             </div>
 
@@ -435,7 +435,7 @@ function LandingSections() {
 
                   <td className="td-our">
                     <span className="chk">
-                      ✓ Zero
+                      ✓ Dry mode / low-water mode
                     </span>
                   </td>
 
@@ -603,12 +603,12 @@ function LandingSections() {
 
                 <div className="pf">
                   <span className="pf-icon">✓</span>
-                  Waterless microfiber brushes
+                  Dry + low-water cleaning modes
                 </div>
 
                 <div className="pf">
                   <span className="pf-icon">✓</span>
-                  Bluetooth app control
+                  WiFi app control
                 </div>
 
                 <div className="pf">

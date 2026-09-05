@@ -13,8 +13,6 @@ function Efficiency() {
   const [payback, setPayback] = useState(0);
   const [fiveYear, setFiveYear] = useState(0);
 
-  const [liveOutput, setLiveOutput] = useState(4.76);
-
   const [dirtyBar, setDirtyBar] = useState(0);
   const [cleanBar, setCleanBar] = useState(0);
 
@@ -88,26 +86,6 @@ function Efficiency() {
 
     return () =>
       clearInterval(animationLoop);
-
-  }, []);
-
-  useEffect(() => {
-
-    const ticker =
-      setInterval(() => {
-
-        const value =
-          (
-            4.72 +
-            Math.random() * 0.10
-          ).toFixed(2);
-
-        setLiveOutput(value);
-
-      }, 1000);
-
-    return () =>
-      clearInterval(ticker);
 
   }, []);
 
@@ -245,10 +223,7 @@ every single month
 <div
 style={{
 marginTop:"20px",
-display:"flex",
-alignItems:"center",
-justifyContent:"center",
-gap:"10px",
+textAlign:"center",
 fontFamily:"var(--font-mono)",
 fontSize:"12px",
 color:"var(--muted)",
@@ -256,22 +231,9 @@ letterSpacing:"1px"
 }}
 >
 
-<div className="pulse-dot green"></div>
+Example based on a 3kW system, 3 months since last clean
 
-Live output right now:
-
-<span
-style={{
-color:"var(--teal)",
-fontWeight:"700"
-}}
->
-
-{liveOutput} kW
-
-</span>
-
-             </div> {/* Live output */}
+             </div> {/* methodology note */}
 
           </div> {/* live-demo-card */}
 

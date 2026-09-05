@@ -1,13 +1,8 @@
 function Problem() {
   return (
     <section
-      className="section"
+      className="section problem-photo-bg"
       id="problem"
-      style={{
-        background: "var(--navy-2)",
-        borderTop: "1px solid var(--border)",
-        borderBottom: "1px solid var(--border)",
-      }}
     >
       <div className="container">
         <div >

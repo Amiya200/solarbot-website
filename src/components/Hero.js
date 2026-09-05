@@ -16,21 +16,24 @@ function Hero() {
           <div className="hero-left">
 
             <div className="hero-eyebrow">
-              <div className="pulse-dot blue"></div>
-              India's First Waterless Solar Cleaning Robot
+              <span className="hero-eyebrow-text">
+                <span className="pulse-dot blue"></span>
+                India's First Dry & Low-Water Solar Cleaning Robot
+              </span>
             </div>
 
             <h1 className="hero-headline">
-              YOUR PANELS
-              <span className="line-red">ARE DIRTY.</span>
-              <span className="line-blue">YOU'RE LOSING</span>
+              YOUR PANELS{" "}
+              <span className="line-red">ARE DIRTY.</span>{" "}
+              <span className="line-blue">YOU'RE LOSING</span>{" "}
               MONEY.
             </h1>
 
             <p className="hero-sub">
               SolarBot Pro automatically cleans your solar panels —
               restoring up to <strong>40% lost efficiency</strong>.
-              Zero water. Zero effort. Zero roof climbing.
+              Dry cleaning mode for daily dust, low-water mode for tougher grime.
+              Zero effort. Zero roof climbing.
               <strong> Pays for itself in months.</strong>
             </p>
 
@@ -57,8 +60,8 @@ function Hero() {
                 </div>
 
                 <div className="trust-stat">
-                    <span className="trust-val teal">₹0</span>
-                    <span className="trust-label">Water Used</span>
+                    <span className="trust-val teal">Dry+H2O</span>
+                    <span className="trust-label">Cleaning Modes</span>
                 </div>
 
                 <div className="trust-stat">
@@ -72,18 +75,18 @@ function Hero() {
           <div className="hero-visual">
 
             <div className="float-badge float-badge-1">
-                ⚡ 4.7 kW — Live Output
+                ⚡ Example: 4.7 kW output
             </div>
 
             <div className="dashboard-card">
 
                 <div className="dash-header">
                 <span className="dash-title">
-                    SolarBot Dashboard
+                    SolarBot App — Sample Dashboard
                 </span>
 
                 <span className="dash-live">
-                    CLEANING ACTIVE
+                    ILLUSTRATIVE
                 </span>
                 </div>
 
@@ -176,10 +179,10 @@ function Hero() {
 
                 <div className="savings-tile">
                     <span className="savings-val green">
-                    ₹0
+                    Low
                     </span>
                     <span className="savings-lbl">
-                    Water Used
+                    Water Use
                     </span>
                 </div>
 
@@ -197,7 +200,7 @@ function Hero() {
             </div>
 
             <div className="float-badge float-badge-2">
-                🌱 Next clean: Tomorrow 6:00 AM
+                🌱 Cleans on a schedule you set
             </div>
 
          </div>      
