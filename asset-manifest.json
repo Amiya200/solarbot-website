@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6da02c45.css",
+    "main.js": "/static/js/main.e961f80f.js",
+    "static/media/ezybuddies-logo.jpg": "/static/media/ezybuddies-logo.1262359801d65a218db3.jpg",
+    "index.html": "/index.html",
+    "main.6da02c45.css.map": "/static/css/main.6da02c45.css.map",
+    "main.e961f80f.js.map": "/static/js/main.e961f80f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6da02c45.css",
+    "static/js/main.e961f80f.js"
+  ]
+}
