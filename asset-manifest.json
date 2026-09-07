@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.6da02c45.css",
-    "main.js": "/static/js/main.e961f80f.js",
-    "static/media/ezybuddies-logo.jpg": "/static/media/ezybuddies-logo.1262359801d65a218db3.jpg",
-    "index.html": "/index.html",
-    "main.6da02c45.css.map": "/static/css/main.6da02c45.css.map",
-    "main.e961f80f.js.map": "/static/js/main.e961f80f.js.map"
+    "main.css": "/solarbot-website/static/css/main.6da02c45.css",
+    "main.js": "/solarbot-website/static/js/main.b4a50d7a.js",
+    "static/media/ezybuddies-logo.jpg": "/solarbot-website/static/media/ezybuddies-logo.1262359801d65a218db3.jpg",
+    "index.html": "/solarbot-website/index.html",
+    "main.6da02c45.css.map": "/solarbot-website/static/css/main.6da02c45.css.map",
+    "main.b4a50d7a.js.map": "/solarbot-website/static/js/main.b4a50d7a.js.map"
   },
   "entrypoints": [
     "static/css/main.6da02c45.css",
-    "static/js/main.e961f80f.js"
+    "static/js/main.b4a50d7a.js"
   ]
 }
