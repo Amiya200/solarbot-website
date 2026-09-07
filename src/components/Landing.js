@@ -1,7 +1,18 @@
+import { useState } from "react";
 import { CONTACT } from "../config/contact";
+import BuyNowModal from "./BuyNowModal";
+
 function LandingSections() {
+  const [buyModalProduct, setBuyModalProduct] = useState(null);
+
   return (
     <>
+      {buyModalProduct && (
+        <BuyNowModal
+          productName={buyModalProduct}
+          onClose={() => setBuyModalProduct(null)}
+        />
+      )}
       {/* ============================================================
           HOW IT WORKS
       ============================================================ */}
@@ -632,6 +643,19 @@ function LandingSections() {
                 Buy Semi — ₹14,000 →
               </a>
 
+              <button
+                type="button"
+                onClick={() => setBuyModalProduct("SolarBot Semi")}
+                className="btn btn-blue"
+                style={{
+                  width: "100%",
+                  justifyContent: "center",
+                  marginTop: "10px",
+                }}
+              >
+                Pay Now — Buy Online
+              </button>
+
             </div>
 
             {/* ===================== FULLY AUTOMATIC (FEATURED) ===================== */}
@@ -725,6 +749,19 @@ function LandingSections() {
                 🛒 Buy Full — ₹25,000 →
               </a>
 
+              <button
+                type="button"
+                onClick={() => setBuyModalProduct("SolarBot Full")}
+                className="btn btn-primary btn-lg"
+                style={{
+                  width: "100%",
+                  justifyContent: "center",
+                  marginTop: "10px",
+                }}
+              >
+                Pay Now — Buy Online
+              </button>
+
             </div>
 
             {/* ===================== ONE-TIME SERVICE ===================== */}
@@ -793,6 +830,19 @@ function LandingSections() {
               >
                 Book a Session — ₹500 →
               </a>
+
+              <button
+                type="button"
+                onClick={() => setBuyModalProduct("Cleaning Service")}
+                className="btn btn-blue"
+                style={{
+                  width: "100%",
+                  justifyContent: "center",
+                  marginTop: "10px",
+                }}
+              >
+                Pay Now — Buy Online
+              </button>
 
             </div>
 

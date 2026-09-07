@@ -3507,3 +3507,12 @@ a, button, [role="button"] { cursor: pointer; }
   .chatbot-launcher { right: 16px; bottom: 190px; }
   .chatbot-panel { right: 12px; bottom: 250px; }
 }
+
+/* =========================================================
+   BUY NOW (Razorpay checkout modal)
+   ========================================================= */
+.buy-now-modal { max-width: 420px; }
+.auth-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 480px) {
+  .auth-form-row { grid-template-columns: 1fr; }
+}

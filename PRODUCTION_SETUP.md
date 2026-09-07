@@ -34,7 +34,32 @@ For a production Meta WhatsApp account, business-initiated messages can require 
 
 Set `ALLOWED_ORIGIN=https://www.yourdomain.com` in Netlify after the real domain is known.
 
-## 5. Build and deploy
+## 5. Payments (Razorpay)
+
+The "Pay Now — Buy Online" buttons on the pricing cards use Razorpay to
+take real payments. This is separate from the WhatsApp booking flow, which
+still works exactly as before with no payment involved.
+
+1. Create a Razorpay account at https://razorpay.com and complete KYC
+   (business details, bank account) — Razorpay requires this before you
+   can accept live payments. This step can only be done by you.
+2. In the Razorpay dashboard, go to Settings -> API Keys and generate a
+   key pair. Start with the **test mode** keys (prefixed `rzp_test_`) so
+   you can try the full flow without moving real money.
+3. Add to Netlify's environment variables (never in a `REACT_APP_*` var,
+   never committed to git):
+   - `RAZORPAY_KEY_ID`
+   - `RAZORPAY_KEY_SECRET`
+4. Test with Razorpay's published test card/UPI numbers (see their docs)
+   before switching to live keys.
+5. When ready to accept real payments, replace both variables with your
+   live-mode key pair from the same dashboard page, and redeploy.
+
+Order confirmations (name, address, product, payment ID) are sent to the
+same `BOOKING_NOTIFICATION_EMAIL` / `WHATSAPP_ADMIN_NUMBER` as bookings,
+so no extra setup is needed there if you've already configured those.
+
+## 6. Build and deploy
 
 Run:
 
